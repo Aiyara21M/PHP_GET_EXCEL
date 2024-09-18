@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "TH Sarabun New";
+  src: url("./THSarabunNew/THSarabunNew.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "TH Sarabun New", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+#dataon,
+th,
+td {
+  border-collapse: collapse; 
+  border-bottom: 2px solid #dcdcdc;
+}
+#tt {
+  color: white;
+  border-color: transparent;
+}
+.bg2 {
+  background: #b0c4de;
+}
+.casecolor{
+  background: #ebebeb;
+}
+#leftb {
+  border-right: 2px solid #dcdcdc;
+}
+#lefta {
+  border-right: 2px solid white;
+}
+nav {
+  display: flex;
+  width: 100%;
+  min-height: 40vh;
+  padding: 5px 5px 5px 5px;
+  z-index: -1;
+  box-shadow: 0px 0px 10px 2px #dcdcdc;
+  background: #b0c4de;
+}
+#ht {
+  color: white;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.headtext {
+  color: #b0c4de;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  z-index: -1;
+}
+#loaddata {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  filter: sepia(100%);
+}
+#datepicker1,
+#datepicker2,
+#datepicker3,
+#datepicker4 {
+  width: 100px;
+  height: 15px;
+  font-size: 0.9em;
+  padding-bottom: -15px;
+  padding-left: 15px;
+  font-weight: 500;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #b0c4de;
+}
+#warp {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  font-size: 22px;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 10px 2px rgb(184, 182, 182);
+  /* transform: scale(0); */
+  transition: 0.5s;
+  background: white;
+  backdrop-filter: blur(10px);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#warp::-webkit-scrollbar {
+  width: 3px; /* กำหนดความกว้างของ scroll */
+}
+#warp::-webkit-scrollbar-track {
+  background: transparent; /* สีพื้นหลัง scroll */
+}
+#warp::-webkit-scrollbar-thumb {
+  background-color: gray; /* กำหนดสีของแถบเลื่อน scroll */
+  border-radius: 20px; /* กำหนดความโค้งมนของแถบเลื่อน scroll */
+  border: 2px solid gray; /* กำหนดสีของแถบเลื่อน scroll */
+  /* กำหนดกรอบเพื่อเว้นระยะรอบแถบเลื่อน scroll */
+}
+#warp::-webkit-scrollbar {
+  width: 3px; /* กำหนดความกว้างของ scroll */
+}
+#dataload {
+  position: absolute;
+  top: -9000px;
+  visibility: hidden;
+}
+#logo {
+  padding-top: 5px;
+}
+#menu {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: absolute;
+  background: #b0c4de;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  top: 10px;
+  right: 25px;
+  box-shadow: 0px 0px 10px 2px #dcdcdc;
+  transform: scale(0);
+}
+#hr1 {
+  top: 60px;
+  border: 1px solid #b0c4de;
+  display: flex;
+  right: 45px;
+  width: 420px;
+  position: absolute;
+  transform: scale(0);
+}
+#swaptable {
+  text-align: center;
+  overflow-x:scroll;
+  max-width: 100%;
+  max-height: 85%;
+}
+#swaptable::-webkit-scrollbar {
+  width: 3px; /* กำหนดความกว้างของ scroll */
+}
+#swaptable::-webkit-scrollbar-track {
+  background: transparent; /* สีพื้นหลัง scroll */
+}
+#swaptable::-webkit-scrollbar-thumb {
+  background-color: #b0c4de; /* กำหนดสีของแถบเลื่อน scroll */
+  border-radius: 20px; /* กำหนดความโค้งมนของแถบเลื่อน scroll */
+  border: 2px solid #b0c4de; /* กำหนดสีของแถบเลื่อน scroll */
+  /* กำหนดกรอบเพื่อเว้นระยะรอบแถบเลื่อน scroll */
+}
+#swaptable::-webkit-scrollbar {
+  width: 3px; /* กำหนดความกว้างของ scroll */
+}
+#expex{
+  z-index: 2;
+  box-shadow: 0px 0px 10px 2px #dcdcdc;
+  color: white;
+  border-radius: 25px;
+  background-color: #b0c4de;
+  position: absolute;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  right: 55px;
+  cursor: pointer;
+   transform: scale(0);
+   padding :5px 5px 5px 5px;
+}
+#menuicon{
+  position: absolute;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+#iconload{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#icclose{
+  position: absolute;
+  top:5px;
+  right: 5px;
+}
+#menu2 {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: absolute;
+  background: #b0c4de;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  top: 10px;
+  right: 25px;
+  box-shadow: 0px 0px 10px 2px #dcdcdc;
+  transform: scale(0);
+}
